@@ -1,3 +1,4 @@
+
 import numpy as np
 
 # 数据类型
@@ -201,7 +202,7 @@ print(x[[4, 2, 1, 7]])
 x=np.arange(32).reshape((8,4))
 print (x[np.ix_([1,5,7,2],[0,3,1,2])])
 
-'''
+
 
 # 广播
 a = np.array([1, 2, 3, 4])
@@ -216,6 +217,7 @@ a = np.array([[0, 0, 0],
 b = np.array([1, 2, 3])
 print(a + b)
 
+'''
 
 # 数组迭代
 '''
@@ -237,4 +239,72 @@ print('\n~~~~~~~~~~~~~~~~')
 
 '''
 
+#flat	数组元素迭代器
+a = np.arange(9).reshape(3,3) 
+print ('原始数组：')
+for row in a:
+    print (row)
+ 
+#对数组中每个元素都进行处理，可以使用flat属性，该属性是一个数组元素迭代器：
+print ('迭代后的数组：')
+for element in a.flat:
+    print (element)
 
+
+# numpy.ndarray.flatten 返回一份数组拷贝，对拷贝所做的修改不会影响原始数组，格式如下：
+# ndarray.flatten(order='C')
+# 参数说明：
+#order：'C' -- 按行，'F' -- 按列，'A' -- 原顺序，'K' -- 元素在内存中的出现顺序
+a = np.arange(8).reshape(2,4)
+ 
+print ('原数组：')
+print (a)
+print ('\n')
+# 默认按行
+ 
+print ('展开的数组：')
+print (a.flatten())
+print ('\n')
+ 
+print ('以 F 风格顺序展开的数组：')
+print (a.flatten(order = 'F'))
+
+#numpy.ravel
+#numpy.ravel() 展平的数组元素，顺序通常是"C风格"
+a = np.arange(8).reshape(2,4)
+ 
+print ('原数组：')
+print (a)
+print ('\n')
+ 
+print ('调用 ravel 函数之后：')
+print (a.ravel())
+print ('\n')
+ 
+print ('以 F 风格顺序调用 ravel 函数之后：')
+print (a.ravel(order = 'F'))
+
+'''
+numpy.transpose 函数用于对换数组的维度，格式如下：
+numpy.transpose(arr, axes)
+参数说明:
+arr：要操作的数组
+axes：整数列表，对应维度，通常所有维度都会对换。
+'''
+
+a = np.arange(12).reshape(3,4)
+ 
+print ('原数组：')
+print (a )
+print ('\n')
+ 
+print ('对换数组：')
+print (np.transpose(a))
+
+#等价
+print ('转置数组：')
+print (a.T)
+
+'''
+
+'''
