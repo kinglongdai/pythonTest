@@ -1,6 +1,5 @@
 # 运算符
 from pyrsistent import b
-from sklearn.manifold import trustworthiness
 from sqlalchemy import true
 
 # 运算符
