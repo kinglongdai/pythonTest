@@ -1,5 +1,4 @@
 # 字符串
-from itertools import count
 
 a = "hello"
 print(len(a))
@@ -24,3 +23,11 @@ print(a.replace('h', 'k'))
 print(a.split("e"))
 print(a.lstrip())
 print(a.isalpha())
+
+print(len(a)-2)
+
+# 字符串不可变，不可修改
+#a[0]="k"
+#print(a)
+
+
