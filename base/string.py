@@ -27,7 +27,7 @@ print(a.isalpha())
 print(len(a)-2)
 
 # 字符串不可变，不可修改
-#a[0]="k"
-#print(a)
+# a[0]="k"
+# print(a)
 
 

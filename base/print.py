@@ -5,6 +5,10 @@ print(f)
 print('%f=' % f)
 print('%f+1=%f' % (f, f+1))
 
+print('{0:.2f}'.format(1.2345))
+print(format(1.2345,'.3f'))
+print('{0}!={1}'.format(1,2))
+
 print('hello, world!')
 # print("你好,世界！")
 print('你好', '世界')
@@ -30,5 +34,10 @@ print(oct(9))
 print(hex(9))
 
 print(3>2>1)
+
+# 不拼接+
+name = "kinglong"
+age = 32
+print(f"{name}:{age}")
 
 

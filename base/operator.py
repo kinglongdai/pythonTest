@@ -1,5 +1,8 @@
 # 运算符
+import math
+from random import random
 from pyrsistent import b
+from soupsieve import match
 from sqlalchemy import true
 
 # 运算符
@@ -32,14 +35,25 @@ print(b)
 
 print(True or False)
 print(True and False)
-print(True is False) #==
-print(True is not False)#!=
+print(True is False)  # ==
+print(True is not False)  # !=
 
-#在对象类型是可变的情况下是不相等的
-a,b=[],[]
-print(a is b) #对象不相等
-print(a==b) #值相等
+# 在对象类型是可变的情况下是不相等的
+a, b = [], []
+print(a is b)  # 对象不相等
+print(a == b)  # 值相等
 
 
 print(type("123"))
 print(str(123))
+
+print(10/4)
+print(10//4)
+print(10/4.0)
+print(10//4.0)
+
+
+print(math.floor(2.6))#地板
+print(math.trunc(2.4))#截断
+print(round(1.22222,2))
+
